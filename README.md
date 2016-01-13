@@ -4,11 +4,11 @@ Show multiple timezones on your iOS device by dragging down the top/today menu. 
 
 ### Widget in the Today menu ###
 
-<img src="https://cloud.githubusercontent.com/assets/16381292/12279979/c39e6a04-b9de-11e5-938a-34b72ad0f863.jpg" width="45%"></img>
+<img src="https://cloud.githubusercontent.com/assets/16381292/12292869/108763ec-ba44-11e5-9542-324172c06721.jpg" width="45%"></img>
 
 ### Main application / Config ###
 
-<img src="https://cloud.githubusercontent.com/assets/16381292/12279980/c5d7d27e-b9de-11e5-9fe3-671a18bce171.jpg" width="45%"></img>
+<img src="https://cloud.githubusercontent.com/assets/16381292/12292871/13c65bee-ba44-11e5-9c8d-56cc10af6c3d.jpg" width="45%"></img>
 
 ### Background ###
 
