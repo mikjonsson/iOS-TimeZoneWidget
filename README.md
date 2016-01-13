@@ -1,0 +1,50 @@
+# TimeZoneWidget #
+
+Show multiple timezones on your iOS device by dragging down the top/today menu. Well... iPhone 6 really, as I haven't worked on support for other devices and screens yet (see TODO below).
+
+### Widget in the Today menu ###
+
+<img src="https://cloud.githubusercontent.com/assets/16381292/12279979/c39e6a04-b9de-11e5-938a-34b72ad0f863.jpg" width="45%"></img>
+
+### Main application / Config ###
+
+<img src="https://cloud.githubusercontent.com/assets/16381292/12279980/c5d7d27e-b9de-11e5-9fe3-671a18bce171.jpg" width="45%"></img>
+
+### Background ###
+
+Two things led to this app:
+
+1. I woke up one morning and decided that I wanted to learn a bit about Swift and iOS development.
+2. I work with multiple teams in multiple timezones and have friends and family in a few different locations, so having easy access to current time in a few of these locations makes my day better.
+
+
+### Heads up ###
+
+Not only is this my first useful (Hey! It works on my device! ;) ) iOS application, I'm at best an amateur developer... 
+
+While the application now does the job for me I do recognize that there are plenty of improvement areas that I just don't have time for (or want to prioritize) right now, but stay tuned - I may just get around to putting some more effort in.
+
+Meanwhile I'd very much appreciate feedback, improvements and fixes.
+
+
+### TODO: Known improvements, ideas and next steps ###
+
+*In no particular order.*
+
+* General code improvements
+* The app has been specifically designed to run on my iPhone 6 and currently has issues with other screens.
++ I didn't really think about Daylight Savings Time... 
+    * But it may work out of the box?
++ Allow 1-n timezones in widget (currently hardcoded to 4)
+    * Then make the widget scrollable left/right if more than x times zones
+* Icon - Yes, it really needs an icon
+* Timezone string needs to look better
+* Add a search field so users can search for the timezone they want
+* UI/UX needs improvement
+* iWatch - I don't have one, but it'd be cool to add support for it
+* Learn about tests in Swift and XCode
+
+
+### Thanks ###
+
+* https://github.com/github/gitignore
