@@ -20,10 +20,10 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     @IBOutlet weak var tz3: UILabel!
     @IBOutlet weak var tz4: UILabel!
     
-    var tz1Selection: String! // = "US/Pacific"
-    var tz2Selection: String! //  = "US/Central"
-    var tz3Selection: String! //  = "US/Eastern"
-    var tz4Selection: String! //  = "Europe/Stockholm"
+    var tz1Selection: String!
+    var tz2Selection: String!
+    var tz3Selection: String!
+    var tz4Selection: String!
     
     let defaults = NSUserDefaults(suiteName: "group.com.mikjonsson.TimeZoneWidget")
   
@@ -31,7 +31,6 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.preferredContentSize = CGSizeMake(320, 50);
         self.updateClocks()
     }
     
@@ -117,6 +116,13 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         
         formatter.timeZone = NSTimeZone(name: tz4Selection)
         tz4.text = formatter.stringFromDate(NSDate())
+        
+        // Hide 4th timezone if device width is less than 375 (currently older device than iPhone 6)
+        let screenWidth = UIScreen.mainScreen().bounds.width
+        if (screenWidth < 375) {
+            tzName4.hidden = true
+            tz4.hidden = true
+        }
     }
     
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
