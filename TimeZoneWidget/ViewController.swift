@@ -14,13 +14,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var clockSwitch: UISwitch!
     @IBOutlet weak var daySwitch: UISwitch!
     
-    var selectedZones = [String?](count: 4, repeatedValue: nil)
+    var selectedZones: [String?]!
     let zoneCellIdentifier = "TimeZoneCell"
     var timeZones = NSTimeZone.knownTimeZoneNames()
     let defaults = NSUserDefaults(suiteName: "group.com.mikjonsson.TimeZoneWidget")
+    let screenWidth = UIScreen.mainScreen().bounds.width
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Hide 4th timezone if device is narrower than 375 (currently older device than iPhone 6)
+        if (screenWidth < 375) {
+            selectedZones = [String?](count: 3, repeatedValue: nil)
+        } else {
+            selectedZones = [String?](count: 4, repeatedValue: nil)
+        }
         
         tableView.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0)
         
@@ -59,11 +67,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             selectedZones[2] = timeZones[2]
             defaults!.setValue(selectedZones[2], forKey: "tz3")
         }
-        if (defaults!.objectForKey("tz4") != nil) {
-            selectedZones[3] = defaults!.objectForKey("tz4") as? String
-        } else {
-            selectedZones[3] = timeZones[3]
-            defaults!.setValue(selectedZones[3], forKey: "tz4")
+        
+        if (screenWidth >= 375) {
+            if (defaults!.objectForKey("tz4") != nil) {
+                selectedZones[3] = defaults!.objectForKey("tz4") as? String
+            } else {
+                selectedZones[3] = timeZones[3]
+                defaults!.setValue(selectedZones[3], forKey: "tz4")
+            }
         }
         
         sortAndCheck()
@@ -105,18 +116,22 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             tableView.reloadData()
         }
         
-        let select4 = UITableViewRowAction(style: .Normal, title: "4") { action, index in
-            print("4: \(self.timeZones[indexPath.row])")
-            
-            self.selectedZones[3] = self.timeZones[indexPath.row]
-            self.defaults!.setValue(self.selectedZones[3], forKey: "tz4")
-
-            self.sortAndCheck()
-            
-            tableView.reloadData()
+        
+        if (screenWidth >= 375) {
+            let select4 = UITableViewRowAction(style: .Normal, title: "4") { action, index in
+                print("4: \(self.timeZones[indexPath.row])")
+                
+                self.selectedZones[3] = self.timeZones[indexPath.row]
+                self.defaults!.setValue(self.selectedZones[3], forKey: "tz4")
+                
+                self.sortAndCheck()
+                
+                tableView.reloadData()
+            }
+            return [select4, select3, select2, select1]
+        } else {
+            return [select3, select2, select1]
         }
-
-        return [select4, select3, select2, select1]
     }
     
     
@@ -128,8 +143,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         timeZones.insert(selectedZones[1]!, atIndex: 1)
         timeZones.removeAtIndex(timeZones.indexOf(selectedZones[2]!)!)
         timeZones.insert(selectedZones[2]!, atIndex: 2)
-        timeZones.removeAtIndex(timeZones.indexOf(selectedZones[3]!)!)
-        timeZones.insert(selectedZones[3]!, atIndex: 3)
+        
+        if (screenWidth >= 375) {
+            timeZones.removeAtIndex(timeZones.indexOf(selectedZones[3]!)!)
+            timeZones.insert(selectedZones[3]!, atIndex: 3)
+        }
     }
     
     
@@ -168,10 +186,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(zoneCellIdentifier, forIndexPath: indexPath) as! TimeZonesTableViewCell
         
-        if (indexPath.row > 3) {
-            cell.accessoryType = .None
+        if (screenWidth >= 375) {
+            if (indexPath.row > 3) {
+                cell.accessoryType = .None
+            } else {
+                cell.accessoryType = .Checkmark
+            }
         } else {
-            cell.accessoryType = .Checkmark
+            if (indexPath.row > 2) {
+                cell.accessoryType = .None
+            } else {
+                cell.accessoryType = .Checkmark
+            }
         }
         
         cell.textLabel?.text = "\(timeZones[indexPath.row]) (\( (NSTimeZone(name: timeZones[indexPath.row])?.localizedName(NSTimeZoneNameStyle.ShortStandard, locale: NSLocale.currentLocale()))! as String ))"
