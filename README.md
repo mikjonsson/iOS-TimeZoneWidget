@@ -1,6 +1,6 @@
 # TimeZoneWidget #
 
-Show multiple timezones on your iOS device by dragging down the top/today menu. Well... iPhone 6 really, as I haven't worked on support for other devices and screens yet (see TODO below).
+Show multiple timezones on your iOS device by dragging down the top/today menu.
 
 ### Widget in the Today menu ###
 
@@ -20,7 +20,7 @@ Two things led to this app:
 
 ### Heads up ###
 
-Not only is this my first useful (Hey! It works on my device! ;) ) iOS application, I'm at best an amateur developer... 
+Not only is this my first useful iOS application, I'm at best an amateur developer... 
 
 While the application now does the job for me I do recognize that there are plenty of improvement areas that I just don't have time for (or want to prioritize) right now, but stay tuned - I may just get around to putting some more effort in.
 
@@ -32,10 +32,10 @@ Meanwhile I'd very much appreciate feedback, improvements and fixes.
 *In no particular order.*
 
 * General code improvements
-* The app has been specifically designed to run on my iPhone 6 and currently has issues with other screens.
+* The app has been specifically designed to run on my iPhone 6, but simulator shows no issues on iPhone 4/5
 + I didn't really think about Daylight Savings Time... 
     * But it may work out of the box?
-+ Allow 1-n timezones in widget (currently hardcoded to 4)
++ Allow 1-n timezones in widget (currently hardcoded to 4 for bigger screens and 3 for smaller screens)
     * Then make the widget scrollable left/right if more than x times zones
 * Icon - Yes, it really needs an icon
 * Timezone string needs to look better
@@ -43,6 +43,7 @@ Meanwhile I'd very much appreciate feedback, improvements and fixes.
 * UI/UX needs improvement
 * iWatch - I don't have one, but it'd be cool to add support for it
 * Learn about tests in Swift and XCode
+* There's a known sorting issue under some circumstances of the selected timezones
 
 
 ### Thanks ###
