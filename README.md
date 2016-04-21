@@ -33,14 +33,9 @@ Meanwhile I'd very much appreciate feedback, improvements and fixes.
 
 * General code improvements
 * The app has been specifically designed to run on my iPhone 6, but simulator shows no issues on iPhone 4/5
-+ I didn't really think about Daylight Savings Time... 
-    * But it may work out of the box?
-+ Allow 1-n timezones in widget (currently hardcoded to 4 for bigger screens and 3 for smaller screens)
-    * Then make the widget scrollable left/right if more than x times zones
 * Icon - Yes, it really needs an icon
-* Timezone string needs to look better
+* Timezone string could look better
 * Add a search field so users can search for the timezone they want
-* UI/UX needs improvement
 * iWatch - I don't have one, but it'd be cool to add support for it
 * Learn about tests in Swift and XCode
 * There's a known sorting issue under some circumstances of the selected timezones
