@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		7D5D21781BF0907F0055B70C /* TimeZonesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5D21771BF0907F0055B70C /* TimeZonesTableViewCell.swift */; };
+		7DCC177C1D17FD3B003FAD17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DDCB22A1BEA2D8F005D2D0D /* Assets.xcassets */; };
+		7DCC178C1D1801CE003FAD17 /* Icon-29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DCC17871D1801CE003FAD17 /* Icon-29@2x.png */; };
+		7DCC178D1D1801CE003FAD17 /* Icon-29@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DCC17881D1801CE003FAD17 /* Icon-29@3x.png */; };
+		7DCC178E1D1801CE003FAD17 /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DCC17891D1801CE003FAD17 /* Icon-40@2x.png */; };
+		7DCC178F1D1801CE003FAD17 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DCC178A1D1801CE003FAD17 /* Icon@2x.png */; };
+		7DCC17901D1801CE003FAD17 /* Icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DCC178B1D1801CE003FAD17 /* Icon@3x.png */; };
 		7DDCB2241BEA2D8F005D2D0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDCB2231BEA2D8F005D2D0D /* AppDelegate.swift */; };
 		7DDCB2261BEA2D8F005D2D0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDCB2251BEA2D8F005D2D0D /* ViewController.swift */; };
 		7DDCB2291BEA2D8F005D2D0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DDCB2271BEA2D8F005D2D0D /* Main.storyboard */; };
@@ -47,6 +53,11 @@
 		7D5CE2001C1432590055CE99 /* TimeZoneWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = TimeZoneWidget.entitlements; sourceTree = "<group>"; };
 		7D5CE2031C1448CB0055CE99 /* TheWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = TheWidget.entitlements; sourceTree = "<group>"; };
 		7D5D21771BF0907F0055B70C /* TimeZonesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeZonesTableViewCell.swift; sourceTree = "<group>"; };
+		7DCC17871D1801CE003FAD17 /* Icon-29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-29@2x.png"; path = "../../images/ios/Icon-29@2x.png"; sourceTree = "<group>"; };
+		7DCC17881D1801CE003FAD17 /* Icon-29@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-29@3x.png"; path = "../../images/ios/Icon-29@3x.png"; sourceTree = "<group>"; };
+		7DCC17891D1801CE003FAD17 /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-40@2x.png"; path = "../../images/ios/Icon-40@2x.png"; sourceTree = "<group>"; };
+		7DCC178A1D1801CE003FAD17 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../../images/ios/Icon@2x.png"; sourceTree = "<group>"; };
+		7DCC178B1D1801CE003FAD17 /* Icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@3x.png"; path = "../../images/ios/Icon@3x.png"; sourceTree = "<group>"; };
 		7DDCB2201BEA2D8F005D2D0D /* TimeZoneWidget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeZoneWidget.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DDCB2231BEA2D8F005D2D0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7DDCB2251BEA2D8F005D2D0D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +94,11 @@
 		7DDCB2171BEA2D8F005D2D0D = {
 			isa = PBXGroup;
 			children = (
+				7DCC17871D1801CE003FAD17 /* Icon-29@2x.png */,
+				7DCC17881D1801CE003FAD17 /* Icon-29@3x.png */,
+				7DCC17891D1801CE003FAD17 /* Icon-40@2x.png */,
+				7DCC178A1D1801CE003FAD17 /* Icon@2x.png */,
+				7DCC178B1D1801CE003FAD17 /* Icon@3x.png */,
 				7DDCB2221BEA2D8F005D2D0D /* TimeZoneWidget */,
 				7DDCB23D1BEA2E0B005D2D0D /* TheWidget */,
 				7DDCB23A1BEA2E0B005D2D0D /* Frameworks */,
@@ -224,8 +240,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DCC178C1D1801CE003FAD17 /* Icon-29@2x.png in Resources */,
 				7DDCB22E1BEA2D8F005D2D0D /* LaunchScreen.storyboard in Resources */,
+				7DCC17901D1801CE003FAD17 /* Icon@3x.png in Resources */,
+				7DCC178F1D1801CE003FAD17 /* Icon@2x.png in Resources */,
 				7DDCB22B1BEA2D8F005D2D0D /* Assets.xcassets in Resources */,
+				7DCC178E1D1801CE003FAD17 /* Icon-40@2x.png in Resources */,
+				7DCC178D1D1801CE003FAD17 /* Icon-29@3x.png in Resources */,
 				7DDCB2291BEA2D8F005D2D0D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -234,6 +255,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DCC177C1D17FD3B003FAD17 /* Assets.xcassets in Resources */,
 				7DDCB2421BEA2E0B005D2D0D /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

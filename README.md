@@ -33,7 +33,7 @@ Meanwhile I'd very much appreciate feedback, improvements and fixes.
 
 * General code improvements
 * The app has been specifically designed to run on my iPhone 6, but simulator shows no issues on iPhone 4/5
-* Icon - Yes, it really needs an icon
+* Icon - Can be improved
 * Timezone string could look better
 * Add a search field so users can search for the timezone they want
 * iWatch - I don't have one, but it'd be cool to add support for it
