@@ -30,7 +30,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     let defaults = NSUserDefaults(suiteName: "group.com.mikjonsson.TimeZoneWidget")
     let screenWidth = UIScreen.mainScreen().bounds.width
     
-    var isFreeApp = false
+    var isFreeApp = false // A possible way for future switch between payed and free app
     
     override func viewDidLoad() {
         super.viewDidLoad()
