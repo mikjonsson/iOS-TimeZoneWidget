@@ -30,8 +30,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     let defaults = NSUserDefaults(suiteName: "group.com.mikjonsson.TimeZoneWidget")
     let screenWidth = UIScreen.mainScreen().bounds.width
     
+    var isFreeApp = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        resetDefaultsIfFree()
         
         timeZones.sortInPlace()
         
@@ -220,6 +224,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         if (screenWidth < 375) {
             tzName4.hidden = true
             tz4.hidden = true
+        }
+    }
+    
+    
+    func resetDefaultsIfFree() {
+        if (isFreeApp) {
+            for key in Array(defaults!.dictionaryRepresentation().keys) {
+                defaults!.removeObjectForKey(key)
+            }
         }
     }
 }
