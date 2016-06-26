@@ -4,11 +4,11 @@ Show multiple timezones on your iOS device by dragging down the top/today menu.
 
 ### Widget in the Today menu ###
 
-<img src="https://cloud.githubusercontent.com/assets/16381292/12292869/108763ec-ba44-11e5-9542-324172c06721.jpg" width="45%"></img>
+<img src="https://cloud.githubusercontent.com/assets/16381292/16362291/5d863a66-3bee-11e6-8255-d697e1301cbe.PNG" width="45%"></img>
 
 ### Main application / Config ###
 
-<img src="https://cloud.githubusercontent.com/assets/16381292/12292871/13c65bee-ba44-11e5-9c8d-56cc10af6c3d.jpg" width="45%"></img>
+<img src="https://cloud.githubusercontent.com/assets/16381292/16362288/44b91e36-3bee-11e6-90ee-de9656c91e9b.PNG" width="45%"></img>
 
 ### Background ###
 
@@ -38,7 +38,6 @@ Meanwhile I'd very much appreciate feedback, improvements and fixes.
 * Add a search field so users can search for the timezone they want
 * iWatch - I don't have one, but it'd be cool to add support for it
 * Learn about tests in Swift and XCode
-* There's a known sorting issue under some circumstances of the selected timezones
 
 
 ### Thanks ###
