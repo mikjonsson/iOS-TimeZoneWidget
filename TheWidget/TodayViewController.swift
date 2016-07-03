@@ -25,7 +25,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     var tz3Selection: String!
     var tz4Selection: String!
     
-    let defaults = NSUserDefaults(suiteName: "group.com.mikjonsson.TimeZoneWidget")
+    let defaults = NSUserDefaults(suiteName: "group.com.mikjonsson.TZWidget")
   
     
     override func viewDidLoad() {

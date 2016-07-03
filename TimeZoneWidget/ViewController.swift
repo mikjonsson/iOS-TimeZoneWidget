@@ -27,7 +27,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var selectedZones: [String?]!
     let zoneCellIdentifier = "TimeZoneCell"
     var timeZones = NSTimeZone.knownTimeZoneNames()
-    let defaults = NSUserDefaults(suiteName: "group.com.mikjonsson.TimeZoneWidget")
+    let defaults = NSUserDefaults(suiteName: "group.com.mikjonsson.TZWidget")
     let screenWidth = UIScreen.mainScreen().bounds.width
     
     var isFreeApp = false // A possible way for future switch between payed and free app
