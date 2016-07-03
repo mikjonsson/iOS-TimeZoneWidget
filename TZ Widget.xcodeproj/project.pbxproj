@@ -423,6 +423,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mikjonsson.TZWidget;
 				PRODUCT_NAME = "TZ Widget";
 				PROVISIONING_PROFILE = "fc50a683-871e-4d92-a67c-3c48dcdd8d19";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -440,6 +441,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mikjonsson.TZWidget;
 				PRODUCT_NAME = "TZ Widget";
 				PROVISIONING_PROFILE = "fc50a683-871e-4d92-a67c-3c48dcdd8d19";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

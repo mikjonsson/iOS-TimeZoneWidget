@@ -84,6 +84,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             defaults!.setValue(selectedZones[2], forKey: "tz3")
         }
         
+        tzName1.text = selectedZones[0]!.location()
+        tzName2.text = selectedZones[1]!.location()
+        tzName3.text = selectedZones[2]!.location()
+        
         if (screenWidth >= 375) {
             if (defaults!.objectForKey("tz4") != nil) {
                 selectedZones[3] = defaults!.objectForKey("tz4") as? String
@@ -91,12 +95,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 selectedZones[3] = "America/Detriot"
                 defaults!.setValue(selectedZones[3], forKey: "tz4")
             }
+            tzName4.text = selectedZones[3]!.location()
         }
         
-        tzName1.text = selectedZones[0]!.location()
-        tzName2.text = selectedZones[1]!.location()
-        tzName3.text = selectedZones[2]!.location()
-        tzName4.text = selectedZones[3]!.location()
         
         updateTime()
     }
@@ -216,14 +217,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tz2.text = formatter.stringFromDate(NSDate())
         formatter.timeZone = NSTimeZone(name: selectedZones[2]!)
         tz3.text = formatter.stringFromDate(NSDate())
-        formatter.timeZone = NSTimeZone(name: selectedZones[3]!)
-        tz4.text = formatter.stringFromDate(NSDate())
         
         // Hide 4th timezone if device width is less than 375 (currently older device than iPhone 6)
         let screenWidth = UIScreen.mainScreen().bounds.width
         if (screenWidth < 375) {
             tzName4.hidden = true
             tz4.hidden = true
+        } else {
+            formatter.timeZone = NSTimeZone(name: selectedZones[3]!)
+            tz4.text = formatter.stringFromDate(NSDate())
         }
     }
     
