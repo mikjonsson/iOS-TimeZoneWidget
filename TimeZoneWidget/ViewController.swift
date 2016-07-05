@@ -29,7 +29,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var timeZones = NSTimeZone.knownTimeZoneNames()
     let defaults = NSUserDefaults(suiteName: "group.com.mikjonsson.TZWidget")
     let screenWidth = UIScreen.mainScreen().bounds.width
-    
+    let formatter = NSDateFormatter()
+
     var isFreeApp = false // A possible way for future switch between payed and free app
     
     override func viewDidLoad() {
@@ -208,7 +209,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             }
         }
       
-        let formatter = NSDateFormatter()
         formatter.dateFormat = "\(dateFormat)\n\(clockFormat)"
         
         formatter.timeZone = NSTimeZone(name: selectedZones[0]!)
