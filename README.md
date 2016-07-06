@@ -2,6 +2,8 @@
 
 Show multiple timezones on your iOS device by dragging down the top/today menu.
 
+If you're just looking to use the app and not interested in the code, it's available in the [App Store](https://itunes.apple.com/au/app/time-zone-widget/id1130780812?mt=8)
+
 ### Widget in the Today menu ###
 
 <img src="https://cloud.githubusercontent.com/assets/16381292/16362291/5d863a66-3bee-11e6-8255-d697e1301cbe.PNG" width="45%"></img>
