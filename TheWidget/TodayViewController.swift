@@ -24,7 +24,8 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     var tz2Selection: String!
     var tz3Selection: String!
     var tz4Selection: String!
-    
+    let formatter = NSDateFormatter()
+
     let defaults = NSUserDefaults(suiteName: "group.com.mikjonsson.TZWidget")
   
     
@@ -101,8 +102,6 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         tzName3.text = tz3Selection.location()
         tzName4.text = tz4Selection.location()
         
-        
-        let formatter = NSDateFormatter()
         formatter.dateFormat = "\(dateFormat)\n\(clockFormat)"
         
         formatter.timeZone = NSTimeZone(name: tz1Selection)
